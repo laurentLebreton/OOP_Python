@@ -1,14 +1,17 @@
 from animal import *
 
 class Zoo():
-    def __init__(self,*args):
+    def __init__(self,liste):
         self.animaux = []
-        for i in args :
+        for i in liste :
             self.animaux.append(i)
 
     def ajouter_animal(self,animal):
-        self.aninaux.append(animal)
+        self.animaux.append(animal)
 
     def __add__(self, other):
-        self.animaux += other.animaux
-        return self.animaux
+        newZoo = Zoo(self.animaux + other.animaux) 
+        return newZoo
+
+    def get_taille(self):
+        return len(self.animaux)

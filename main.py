@@ -20,12 +20,14 @@ monSerpent2= Serpent(210,220)
 monOiseau= Oiseau(50,30,100)
 monOiseau2= Oiseau(250,230,2100)
 #monOiseau.se_deplacer()
-
-monZoo = Zoo(monAnimal,monSerpent,monOiseau)
-monZoo2 = Zoo(monAnimal2,monSerpent2,monOiseau2)
+ListeAnimaux1 = [monAnimal,monSerpent,monOiseau]
+monZoo = Zoo(ListeAnimaux1)
+ListeAnimaux2 = [monAnimal2,monSerpent2,monOiseau2]
+monZoo2 = Zoo(ListeAnimaux2)
 
 monNouveauZoo = monZoo + monZoo2
-
-print(monNouveauZoo[4].get_taille())
+print(isinstance(monNouveauZoo,Zoo))
+print(monNouveauZoo.get_taille())
+#print(monNouveauZoo[4].get_taille())
 
 #print(monZoo.animaux[1].get_taille())
